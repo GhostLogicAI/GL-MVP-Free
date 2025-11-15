@@ -1,0 +1,10 @@
+dist/
+build/
+*.spec
+__pycache__/
+*.pyc
+evidence_log.jsonl
+*.app
+*.pkg
+*.exe
+.DS_Store

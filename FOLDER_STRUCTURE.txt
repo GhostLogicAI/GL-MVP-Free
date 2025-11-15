@@ -1,0 +1,27 @@
+GhostLogic-Free/
+├── agent.py
+├── events.py
+├── process_snapshot.py
+├── upload_r2.py
+├── upload_kv.py
+├── utils.py
+├── ghostlogic_free.py
+├── dashboard.py
+├── watchdog.py
+├── requirements.txt
+├── icon.ico
+├── icon.icns
+├── ghostlogic_free.iss
+├── make_pkg.sh
+├── BUILD_COMMANDS.txt
+├── README.md
+├── .gitignore
+├── __init__.py
+├── watch/
+│   └── (testfile.txt created by installer)
+├── dist/
+│   ├── ghostlogic_free (or .exe)
+│   ├── dashboard (or .exe)
+│   └── watchdog (or .exe)
+└── build/
+    └── (pyinstaller temp files)

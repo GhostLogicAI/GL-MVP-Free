@@ -1,0 +1,9 @@
+# macOS Build Commands
+pyinstaller --onefile --icon=icon.icns ghostlogic_free.py
+pyinstaller --onefile --icon=icon.icns dashboard.py
+pyinstaller --onefile watchdog.py
+
+# Windows Build Commands
+pyinstaller --onefile --icon=icon.ico ghostlogic_free.py
+pyinstaller --onefile --icon=icon.ico dashboard.py
+pyinstaller --onefile watchdog.py
