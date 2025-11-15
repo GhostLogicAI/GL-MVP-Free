@@ -21,10 +21,10 @@ mkdir -p "${APP_DIR}/Contents/MacOS/watch"
 # Copy binaries
 cp dist/ghostlogic_free "${APP_DIR}/Contents/MacOS/"
 cp dist/dashboard "${APP_DIR}/Contents/MacOS/"
-cp dist/watchdog "${APP_DIR}/Contents/MacOS/"
+cp dist/supervisor "${APP_DIR}/Contents/MacOS/"
 chmod +x "${APP_DIR}/Contents/MacOS/ghostlogic_free"
 chmod +x "${APP_DIR}/Contents/MacOS/dashboard"
-chmod +x "${APP_DIR}/Contents/MacOS/watchdog"
+chmod +x "${APP_DIR}/Contents/MacOS/supervisor"
 
 # Copy icon
 if [ -f icon.icns ]; then
@@ -41,7 +41,7 @@ cat > "${APP_DIR}/Contents/Info.plist" << 'EOF'
 <plist version="1.0">
 <dict>
     <key>CFBundleExecutable</key>
-    <string>watchdog</string>
+    <string>supervisor</string>
     <key>CFBundleIdentifier</key>
     <string>com.ghostlogic.free</string>
     <key>CFBundleName</key>

@@ -10,7 +10,7 @@ GhostLogic-Free/
 ├── utils.py
 ├── ghostlogic_free.py
 ├── dashboard.py
-├── watchdog.py
+├── supervisor.py
 ├── requirements.txt
 ├── icon.ico
 ├── icon.icns
@@ -24,7 +24,7 @@ GhostLogic-Free/
 ├── dist/
 │   ├── ghostlogic_free (or .exe)
 │   ├── dashboard (or .exe)
-│   └── watchdog (or .exe)
+│   └── supervisor (or .exe)
 └── build/
     └── (pyinstaller temp files)
 
@@ -37,7 +37,7 @@ GhostLogic-Free.app/
 │   ├── MacOS/
 │   │   ├── ghostlogic_free
 │   │   ├── dashboard
-│   │   ├── watchdog
+│   │   ├── supervisor
 │   │   └── watch/
 │   │       └── testfile.txt
 │   └── Resources/
@@ -51,7 +51,7 @@ WINDOWS INSTALLED STRUCTURE
 C:\Program Files\GhostLogic Free\
 ├── ghostlogic_free.exe
 ├── dashboard.exe
-├── watchdog.exe
+├── supervisor.exe
 ├── icon.ico
 └── watch\
     └── testfile.txt
@@ -59,7 +59,7 @@ C:\Program Files\GhostLogic Free\
 Start Menu:
 ├── GhostLogic Free Agent (→ ghostlogic_free.exe)
 ├── GhostLogic Dashboard (→ dashboard.exe)
-├── GhostLogic Watchdog (→ watchdog.exe)
+├── GhostLogic Supervisor (→ supervisor.exe)
 └── Uninstall GhostLogic Free
 
 GhostLogic-Free-Installer.exe (installer creates above structure)

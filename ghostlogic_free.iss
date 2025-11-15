@@ -15,7 +15,7 @@ UninstallDisplayIcon={app}\icon.ico
 [Files]
 Source: "dist\ghostlogic_free.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "dist\dashboard.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "dist\watchdog.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "dist\supervisor.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "icon.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 [Dirs]
@@ -24,11 +24,11 @@ Name: "{app}\watch"
 [Icons]
 Name: "{group}\GhostLogic Free Agent"; Filename: "{app}\ghostlogic_free.exe"; IconFilename: "{app}\icon.ico"
 Name: "{group}\GhostLogic Dashboard"; Filename: "{app}\dashboard.exe"; IconFilename: "{app}\icon.ico"
-Name: "{group}\GhostLogic Watchdog"; Filename: "{app}\watchdog.exe"; IconFilename: "{app}\icon.ico"
+Name: "{group}\GhostLogic Supervisor"; Filename: "{app}\supervisor.exe"; IconFilename: "{app}\icon.ico"
 Name: "{group}\Uninstall GhostLogic Free"; Filename: "{uninstallexe}"
 
 [Run]
-Filename: "{app}\watchdog.exe"; Description: "Launch GhostLogic Watchdog"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\supervisor.exe"; Description: "Launch GhostLogic Supervisor"; Flags: nowait postinstall skipifsilent
 
 [Code]
 procedure CurStepChanged(CurStep: TSetupStep);
