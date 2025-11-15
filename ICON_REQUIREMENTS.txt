@@ -1,0 +1,44 @@
+ICON FILE REQUIREMENTS
+======================
+
+macOS:
+------
+File: icon.icns
+Location: /home/user/GL-MVP-Free/icon.icns
+Format: Apple Icon Image (.icns)
+Required sizes: 16x16, 32x32, 128x128, 256x256, 512x512, 1024x1024
+Tool to create: iconutil (macOS) or online converter
+
+Windows:
+--------
+File: icon.ico
+Location: /home/user/GL-MVP-Free/icon.ico
+Format: Windows Icon (.ico)
+Required sizes: 16x16, 32x32, 48x48, 256x256
+Tool to create: GIMP, ImageMagick, or online converter
+
+PLACEHOLDER CREATION:
+---------------------
+# Create simple placeholder icons (requires ImageMagick)
+
+# For PNG source (create 1024x1024 base image first):
+convert -size 1024x1024 xc:#1E3A8A -gravity center \
+  -pointsize 200 -fill white -annotate +0+0 "GL" \
+  icon_base.png
+
+# macOS icon:
+mkdir icon.iconset
+sips -z 16 16     icon_base.png --out icon.iconset/icon_16x16.png
+sips -z 32 32     icon_base.png --out icon.iconset/icon_16x16@2x.png
+sips -z 32 32     icon_base.png --out icon.iconset/icon_32x32.png
+sips -z 64 64     icon_base.png --out icon.iconset/icon_32x32@2x.png
+sips -z 128 128   icon_base.png --out icon.iconset/icon_128x128.png
+sips -z 256 256   icon_base.png --out icon.iconset/icon_128x128@2x.png
+sips -z 256 256   icon_base.png --out icon.iconset/icon_256x256.png
+sips -z 512 512   icon_base.png --out icon.iconset/icon_256x256@2x.png
+sips -z 512 512   icon_base.png --out icon.iconset/icon_512x512.png
+sips -z 1024 1024 icon_base.png --out icon.iconset/icon_512x512@2x.png
+iconutil -c icns icon.iconset
+
+# Windows icon:
+convert icon_base.png -define icon:auto-resize=256,48,32,16 icon.ico
