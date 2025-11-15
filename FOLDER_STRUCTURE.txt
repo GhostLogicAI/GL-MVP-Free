@@ -1,3 +1,6 @@
+DEVELOPMENT FOLDER STRUCTURE
+============================
+
 GhostLogic-Free/
 ├── agent.py
 ├── events.py
@@ -14,14 +17,49 @@ GhostLogic-Free/
 ├── ghostlogic_free.iss
 ├── make_pkg.sh
 ├── BUILD_COMMANDS.txt
+├── ICON_REQUIREMENTS.txt
 ├── README.md
 ├── .gitignore
 ├── __init__.py
-├── watch/
-│   └── (testfile.txt created by installer)
 ├── dist/
 │   ├── ghostlogic_free (or .exe)
 │   ├── dashboard (or .exe)
 │   └── watchdog (or .exe)
 └── build/
     └── (pyinstaller temp files)
+
+macOS INSTALLER OUTPUT
+======================
+
+GhostLogic-Free.app/
+├── Contents/
+│   ├── Info.plist
+│   ├── MacOS/
+│   │   ├── ghostlogic_free
+│   │   ├── dashboard
+│   │   ├── watchdog
+│   │   └── watch/
+│   │       └── testfile.txt
+│   └── Resources/
+│       └── icon.icns
+
+GhostLogic-Free.pkg (installer creates above in /Applications/)
+
+WINDOWS INSTALLED STRUCTURE
+============================
+
+C:\Program Files\GhostLogic Free\
+├── ghostlogic_free.exe
+├── dashboard.exe
+├── watchdog.exe
+├── icon.ico
+└── watch\
+    └── testfile.txt
+
+Start Menu:
+├── GhostLogic Free Agent (→ ghostlogic_free.exe)
+├── GhostLogic Dashboard (→ dashboard.exe)
+├── GhostLogic Watchdog (→ watchdog.exe)
+└── Uninstall GhostLogic Free
+
+GhostLogic-Free-Installer.exe (installer creates above structure)

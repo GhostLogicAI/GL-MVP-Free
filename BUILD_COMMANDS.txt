@@ -2,8 +2,11 @@
 pyinstaller --onefile --icon=icon.icns ghostlogic_free.py
 pyinstaller --onefile --icon=icon.icns dashboard.py
 pyinstaller --onefile watchdog.py
+chmod +x make_pkg.sh
+./make_pkg.sh
 
 # Windows Build Commands
 pyinstaller --onefile --icon=icon.ico ghostlogic_free.py
 pyinstaller --onefile --icon=icon.ico dashboard.py
 pyinstaller --onefile watchdog.py
+iscc ghostlogic_free.iss

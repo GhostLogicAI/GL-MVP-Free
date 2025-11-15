@@ -17,24 +17,18 @@ Source: "dist\ghostlogic_free.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "dist\dashboard.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "dist\watchdog.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "icon.ico"; DestDir: "{app}"; Flags: ignoreversion
-Source: "utils.py"; DestDir: "{app}"; Flags: ignoreversion
-Source: "process_snapshot.py"; DestDir: "{app}"; Flags: ignoreversion
-Source: "upload_r2.py"; DestDir: "{app}"; Flags: ignoreversion
-Source: "upload_kv.py"; DestDir: "{app}"; Flags: ignoreversion
-Source: "events.py"; DestDir: "{app}"; Flags: ignoreversion
-Source: "agent.py"; DestDir: "{app}"; Flags: ignoreversion
 
 [Dirs]
 Name: "{app}\watch"
 
 [Icons]
-Name: "{group}\GhostLogic Free Agent"; Filename: "{app}\ghostlogic_free.exe"
-Name: "{group}\GhostLogic Dashboard"; Filename: "{app}\dashboard.exe"
-Name: "{group}\GhostLogic Watchdog"; Filename: "{app}\watchdog.exe"
+Name: "{group}\GhostLogic Free Agent"; Filename: "{app}\ghostlogic_free.exe"; IconFilename: "{app}\icon.ico"
+Name: "{group}\GhostLogic Dashboard"; Filename: "{app}\dashboard.exe"; IconFilename: "{app}\icon.ico"
+Name: "{group}\GhostLogic Watchdog"; Filename: "{app}\watchdog.exe"; IconFilename: "{app}\icon.ico"
 Name: "{group}\Uninstall GhostLogic Free"; Filename: "{uninstallexe}"
 
 [Run]
-Filename: "{app}\watch\testfile.txt"; Flags: shellexec skipifdoesntexist postinstall skipifsilent; Description: "View test file"
+Filename: "{app}\watchdog.exe"; Description: "Launch GhostLogic Watchdog"; Flags: nowait postinstall skipifsilent
 
 [Code]
 procedure CurStepChanged(CurStep: TSetupStep);
